@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Pokemon Solid.ttf">
+            <string>PokemonSolidNormal</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -24,9 +29,37 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MGi-Rn-GHW">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" PokeDex" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6q-Dj-DEO">
+                                        <rect key="frame" x="107.5" y="8" width="160" height="49"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="160" id="1Zj-ji-KHQ"/>
+                                            <constraint firstAttribute="height" constant="49" id="wub-VM-HNo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="31"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3Z-8k-bYQ">
+                                        <rect key="frame" x="291" y="8" width="54" height="54"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="54" id="ECP-g3-4Il"/>
+                                            <constraint firstAttribute="height" constant="54" id="Zuu-tM-eqw"/>
+                                        </constraints>
+                                        <state key="normal" image="music"/>
+                                        <connections>
+                                            <action selector="musicBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ula-gq-j2z"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="1" green="0.34509803921568627" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="Z6q-Dj-DEO" firstAttribute="centerX" secondItem="MGi-Rn-GHW" secondAttribute="centerX" id="MOX-f8-zGP"/>
+                                    <constraint firstItem="X3Z-8k-bYQ" firstAttribute="top" secondItem="MGi-Rn-GHW" secondAttribute="top" constant="8" id="fMN-TV-6MB"/>
+                                    <constraint firstAttribute="bottom" secondItem="X3Z-8k-bYQ" secondAttribute="bottom" constant="3" id="gfC-vg-dGW"/>
+                                    <constraint firstItem="Z6q-Dj-DEO" firstAttribute="centerY" secondItem="MGi-Rn-GHW" secondAttribute="centerY" id="p4Q-LV-gRZ"/>
                                     <constraint firstAttribute="height" constant="65" id="u5K-RG-sWV"/>
+                                    <constraint firstAttribute="trailing" secondItem="X3Z-8k-bYQ" secondAttribute="trailing" constant="30" id="uky-aQ-u7T"/>
                                 </constraints>
                             </view>
                             <searchBar contentMode="redraw" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CG8-Io-lII">
@@ -118,5 +151,6 @@
     <resources>
         <image name="4" width="120" height="120"/>
         <image name="bg" width="1920" height="1200"/>
+        <image name="music" width="100" height="100"/>
     </resources>
 </document>
